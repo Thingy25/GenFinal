@@ -26,13 +26,13 @@ public class ThirdPersonController : MonoBehaviour
 
    private void OnEnable()
    {
-      playerActionAsset.Player.Jump.started += DoJump;
+      playerActionAsset.Player.Jump.performed += DoJump;
       move = playerActionAsset.Player.Move;
       playerActionAsset.Player.Enable();
    }
    private void OnDisable()
    {
-      playerActionAsset.Player.Jump.started -= DoJump;
+      playerActionAsset.Player.Jump.performed -= DoJump;
       playerActionAsset.Player.Disable();
    }
 
@@ -54,13 +54,19 @@ public class ThirdPersonController : MonoBehaviour
 
    private void LookAt()
    {
-      Vector3 direction = rb.angularVelocity;
-      direction.y = 0f;
+      Vector2 input = move.ReadValue<Vector2>();
+      if (input.sqrMagnitude > 0.1f)
+      {
+         Vector3 lookDirection = GetCameraRight(playerCamera) * input.x + GetCameraForward(playerCamera) * input.y;
+         lookDirection.y = 0f;
 
-      if (move.ReadValue<Vector2>().sqrMagnitude > 0.1f && direction.sqrMagnitude > 0.1f)
-         this.rb.rotation = Quaternion.LookRotation(direction, Vector3.up);
-      else
-         rb.angularVelocity = Vector3.zero;
+         if (lookDirection != Vector3.zero)
+         {
+            Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
+            rb.MoveRotation(Quaternion.Slerp(rb.rotation, targetRotation, Time.fixedDeltaTime * 10f));
+         }
+      }
+        
    }
 
    private Vector3 GetCameraForward(Camera playerCamera1)
@@ -80,9 +86,13 @@ public class ThirdPersonController : MonoBehaviour
 
    private void DoJump(InputAction.CallbackContext obj)
    {
+     
+      
       if (IsGrounded())
       {
          forceDirection+= Vector3.up * jumpForce;
+         rb.AddForce(forceDirection, ForceMode.Force);
+         Debug.Log("Salto");
       }
    }
 
