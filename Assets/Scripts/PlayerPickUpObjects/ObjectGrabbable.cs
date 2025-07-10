@@ -33,4 +33,10 @@ public class ObjectGrabbable : MonoBehaviour
          rb.MovePosition(newPos);
       }
    }
+
+   void OnCollisionEnter(Collision collision)
+   {
+       IBreakables breakable = collision.gameObject.GetComponent<IBreakables>();
+       breakable?.OnThrowableHit();
+   }
 }
