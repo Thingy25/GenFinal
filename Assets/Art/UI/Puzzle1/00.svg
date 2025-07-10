@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372.56 421.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d1d1d1;
+        stroke: #e60f9e;
+        stroke-miterlimit: 10;
+        stroke-width: .25px;
+      }
+
+      .cls-2 {
+        fill: #e3035a;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        fill: #41b6a3;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect class="cls-1" x=".13" y="22" width="220.39" height="399.38" rx="43.25" ry="43.25"/>
+    <path class="cls-3" d="M211.39,405.38H50.79c-17.63,0-31.97-20.75-31.97-46.25V46.25C18.82,20.75,33.16,0,50.79,0h160.61c17.63,0,31.97,20.75,31.97,46.25v312.88c0,25.5-14.34,46.25-31.97,46.25ZM50.79,6c-15.34,0-27.82,18.06-27.82,40.25v312.88c0,22.19,12.48,40.25,27.82,40.25h160.61c15.34,0,27.82-18.06,27.82-40.25V46.25c0-22.2-12.48-40.25-27.82-40.25H50.79Z"/>
+  </g>
+  <rect class="cls-4" x="140.97" y="261.22" width="231.59" height="26"/>
+  <rect class="cls-2" x="140.97" y="145.05" width="231.59" height="25"/>
+  <circle class="cls-4" cx="140.97" cy="274.22" r="41.26"/>
+  <circle class="cls-2" cx="140.97" cy="157.55" r="41.26"/>
+</svg>
