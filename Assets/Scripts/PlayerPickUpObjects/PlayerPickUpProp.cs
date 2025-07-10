@@ -59,7 +59,7 @@ public class PlayerPickUpProp : MonoBehaviour
         }
         else
         {
-            objectGrabbable.Drop();
+            objectGrabbable.Drop(playerCameraTransform.forward);
             objectGrabbable = null;
         }
        

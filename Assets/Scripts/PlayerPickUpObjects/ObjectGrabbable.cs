@@ -17,12 +17,11 @@ public class ObjectGrabbable : MonoBehaviour
       rb.useGravity = false;
    }
 
-   public void Drop()
+   public void Drop( Vector3 cameraPos)
    {
-      Vector3 direction = objectGrabPointTransform.forward;
       this.objectGrabPointTransform = null;
       rb.useGravity = true;
-      rb.AddForce(direction * 10f, ForceMode.Impulse);
+      rb.AddForce(cameraPos * 50f, ForceMode.Impulse);
    }
 
    private void FixedUpdate()
