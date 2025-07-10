@@ -6,6 +6,6 @@ public class MainMenuButtons : MonoBehaviour
 {
    public void LoadGameScene()
    {
-       SceneManager.LoadScene("PlayerControllerTest");
+       SceneManager.LoadScene("PuzzleTesting");
    }
 }
