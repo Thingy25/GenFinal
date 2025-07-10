@@ -62,6 +62,12 @@ public class PlayerPickUpProp : MonoBehaviour
             objectGrabbable.Drop(playerCameraTransform.forward);
             objectGrabbable = null;
         }
+
+        if (currentInteractable != null)
+        {
+            currentInteractable.Inteact();
+        }
+      
        
     }
 
