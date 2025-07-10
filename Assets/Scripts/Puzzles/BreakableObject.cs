@@ -6,15 +6,21 @@ public class BreakableObject : MonoBehaviour, IBreakables
     GameObject partToBreak;
     [SerializeField]
     GameObject brokenPart;
+
+    bool wasbroken;
     void Start()
     {
-        
+        //Invoke("IBreakables.OnThrowableHit", 2);
     }
 
     void IBreakables.OnThrowableHit()
     {
-        Debug.Log("BROOOOOOOOOOOken");
-        partToBreak.SetActive(false);
-        brokenPart.SetActive(true);
+        if (!wasbroken)
+        {
+            Debug.Log("BROOOOOOOOOOOken");
+            partToBreak.SetActive(false);
+            brokenPart.SetActive(true);
+            wasbroken = true;
+        }
     }
 }
