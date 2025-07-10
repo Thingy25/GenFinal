@@ -1,4 +1,5 @@
 using System;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,6 +8,7 @@ public class ThirdPersonController : MonoBehaviour
    // Input fields
    private ThirdPersonAction playerActionAsset;
    private InputAction move;
+   private InputAction aim;
    
    //movement flieds
    private Rigidbody rb;
@@ -15,6 +17,11 @@ public class ThirdPersonController : MonoBehaviour
    [SerializeField] private float maxSpeed = 5f;
    private Vector3 forceDirection = Vector3.zero;
    [SerializeField] private Camera playerCamera;
+   
+   //cinemachine camera
+   [SerializeField] private CinemachineCamera cinemachineCamera;
+   [SerializeField] private CinemachineRotationComposer rotationComposer;
+   private float originalFOV = 50;
 
    private void Awake()
    {
@@ -27,13 +34,30 @@ public class ThirdPersonController : MonoBehaviour
    private void OnEnable()
    {
       playerActionAsset.Player.Jump.performed += DoJump;
+      playerActionAsset.Player.Pause.performed += PauseGame;
       move = playerActionAsset.Player.Move;
+      aim = playerActionAsset.Player.Aim;
       playerActionAsset.Player.Enable();
    }
    private void OnDisable()
    {
       playerActionAsset.Player.Jump.performed -= DoJump;
       playerActionAsset.Player.Disable();
+   }
+
+   private void Update()
+   {
+      if (aim.ReadValue<float>() > 0.1)
+      {
+         CameraZoom();
+         HudManager.Instance.ActivateCrossHair();
+      }
+      else
+      {
+         HudManager.Instance.DesactiveCrossHair();
+         cinemachineCamera.Lens.FieldOfView = originalFOV;
+         rotationComposer.TargetOffset = new Vector3(0, 0, 0);
+      }
    }
 
    private void FixedUpdate()
@@ -51,6 +75,13 @@ public class ThirdPersonController : MonoBehaviour
       
       LookAt();
    }
+
+   private void CameraZoom()
+   {
+      cinemachineCamera.Lens.FieldOfView = Mathf.Lerp(originalFOV, 40f, 3f);
+      rotationComposer.TargetOffset = new Vector3(Mathf.Lerp(0,1,3f), 0, 0);
+   }
+   
 
    private void LookAt()
    {
@@ -86,14 +117,17 @@ public class ThirdPersonController : MonoBehaviour
 
    private void DoJump(InputAction.CallbackContext obj)
    {
-     
-      
       if (IsGrounded())
       {
          forceDirection+= Vector3.up * jumpForce;
          rb.AddForce(forceDirection, ForceMode.Force);
          Debug.Log("Salto");
       }
+   }
+
+   private void PauseGame(InputAction.CallbackContext obj)
+   {
+      HudManager.Instance.PauseGame();
    }
 
    private bool IsGrounded()

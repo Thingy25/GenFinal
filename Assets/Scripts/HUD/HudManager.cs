@@ -1,9 +1,14 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HudManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text interactionText;
+    [SerializeField] private GameObject pausePanel;
+    [SerializeField] private GameObject crossHair;
+    private bool isGamePaused = false;
+    
     
     public static HudManager Instance { get; private set; }
     private void Awake() 
@@ -29,5 +34,42 @@ public class HudManager : MonoBehaviour
     {
         interactionText.gameObject.SetActive(false);
     }
+
+    public void PauseGame()
+    {
+        if (!isGamePaused)
+        {
+            pausePanel.SetActive(true);
+            Time.timeScale = 0f;
+            isGamePaused = true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            pausePanel.SetActive(false);
+            Time.timeScale = 1f;
+            isGamePaused = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+       
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void ActivateCrossHair()
+    {
+        crossHair.SetActive(true);
+    }
+
+    public void DesactiveCrossHair()
+    {
+        crossHair.SetActive(false);
+    }
+    
   
 }
