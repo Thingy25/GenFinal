@@ -7,7 +7,8 @@ public class HudManager : MonoBehaviour
     [SerializeField] private TMP_Text interactionText;
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject crossHair;
-    private bool isGamePaused = false;
+    public bool isGamePaused = false;
+    public bool canPause = true;
     
     
     public static HudManager Instance { get; private set; }
@@ -37,28 +38,30 @@ public class HudManager : MonoBehaviour
 
     public void PauseGame()
     {
-        if (!isGamePaused)
+        if (canPause)
         {
-            pausePanel.SetActive(true);
-            Time.timeScale = 0f;
-            isGamePaused = true;
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-        else
-        {
-            pausePanel.SetActive(false);
-           
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            if (!isGamePaused)
+            {
+                pausePanel.SetActive(true);
+                Time.timeScale = 0f;
+                isGamePaused = true;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+            else
+            {
+                pausePanel.SetActive(false);
+                Time.timeScale = 1f;
+                isGamePaused = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
         }
        
     }
 
     public void LoadMainMenu()
     {
-        Time.timeScale = 1f;
-        isGamePaused = false;
         SceneManager.LoadScene("MainMenu");
     }
 
