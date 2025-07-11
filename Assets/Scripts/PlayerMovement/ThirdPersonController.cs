@@ -25,6 +25,8 @@ public class ThirdPersonController : MonoBehaviour
    
    //Animation
    [SerializeField] private Animator animator;
+   private float sadTimer = 30f;
+   
 
    private void Awake()
    {
@@ -61,6 +63,11 @@ public class ThirdPersonController : MonoBehaviour
          cinemachineCamera.Lens.FieldOfView = originalFOV;
          rotationComposer.TargetOffset = new Vector3(0, 0, 0);
       }
+
+      sadTimer -= Time.deltaTime;
+      if(sadTimer<0) SetSadIdle();
+
+
    }
 
    private void FixedUpdate()
@@ -79,6 +86,12 @@ public class ThirdPersonController : MonoBehaviour
       }
       
       LookAt();
+   }
+
+   private void SetSadIdle()
+   {
+      animator.SetTrigger("IsSad");
+      sadTimer = 30f;
    }
 
    private void CameraZoom()
