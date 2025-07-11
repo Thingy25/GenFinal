@@ -62,6 +62,8 @@ public class HudManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
+        pausePanel.SetActive(false);
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 
