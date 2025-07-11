@@ -48,8 +48,7 @@ public class HudManager : MonoBehaviour
         else
         {
             pausePanel.SetActive(false);
-            Time.timeScale = 1f;
-            isGamePaused = false;
+           
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
@@ -58,6 +57,8 @@ public class HudManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
+        Time.timeScale = 1f;
+        isGamePaused = false;
         SceneManager.LoadScene("MainMenu");
     }
 

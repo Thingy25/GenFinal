@@ -21,7 +21,10 @@ public class ThirdPersonController : MonoBehaviour
    //cinemachine camera
    [SerializeField] private CinemachineCamera cinemachineCamera;
    [SerializeField] private CinemachineRotationComposer rotationComposer;
-   private float originalFOV = 50;
+   public float originalFOV = 50;
+   
+   //Animation
+   [SerializeField] private Animator animator;
 
    private void Awake()
    {
@@ -62,6 +65,8 @@ public class ThirdPersonController : MonoBehaviour
 
    private void FixedUpdate()
    {
+      animator.SetFloat("RunValue", move.ReadValue<Vector2>() .magnitude);
+      
       forceDirection += move.ReadValue<Vector2>().x * GetCameraRight(playerCamera) * movementForce;
       forceDirection += move.ReadValue<Vector2>().y * GetCameraForward(playerCamera) * movementForce;
       
