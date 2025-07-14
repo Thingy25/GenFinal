@@ -5,7 +5,7 @@ public class EnergyPuzzleButton : MonoBehaviour
 {
     Button puzzleButton;
     RectTransform rectTransform;
-    Vector3 correctPos;
+    public Vector3 correctPos;
     int[] possibleRotations = new int[4] {90, 180, -90, -180};
     private void Awake()
     {
@@ -18,6 +18,7 @@ public class EnergyPuzzleButton : MonoBehaviour
     void OnEnable()
     {
         rectTransform.Rotate(new Vector3(0, 0, possibleRotations[Random.Range(0, possibleRotations.Length)]));
+        //Debug.Log(rectTransform.eulerAngles);
     }
 
     // Update is called once per frame
@@ -28,7 +29,8 @@ public class EnergyPuzzleButton : MonoBehaviour
     void RotateButton()
     {
         rectTransform.Rotate(new Vector3(0, 0, -90));
-        if (rectTransform.eulerAngles == correctPos)
+        //Debug.Log(rectTransform.eulerAngles.z);
+        if (rectTransform.eulerAngles.z < correctPos.z + 0.1 && rectTransform.eulerAngles.z > correctPos.z - 0.1)
         {
             Debug.Log("CORRETECUMME");
         }
