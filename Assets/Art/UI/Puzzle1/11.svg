@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350.31 350.31">
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350.25 350.25">
   <defs>
     <style>
       .cls-1 {
@@ -15,21 +15,31 @@
       }
 
       .cls-4 {
+        fill: none;
+        stroke: #d1d1d1;
+        stroke-miterlimit: 10;
+        stroke-width: .25px;
+      }
+
+      .cls-5 {
         fill: #e60f9e;
       }
     </style>
   </defs>
   <g>
-    <rect class="cls-3" x="29.18" y="25.39" width="291.9" height="299.59" rx="43.25" ry="43.25"/>
-    <path class="cls-4" d="M277.82,327.98H72.43c-25.5,0-46.25-20.75-46.25-46.25V68.64c0-25.5,20.75-46.25,46.25-46.25h205.39c25.5,0,46.25,20.75,46.25,46.25v213.09c0,25.5-20.75,46.25-46.25,46.25ZM72.43,28.39c-22.19,0-40.25,18.06-40.25,40.25v213.09c0,22.2,18.06,40.25,40.25,40.25h205.39c22.19,0,40.25-18.06,40.25-40.25V68.64c0-22.2-18.06-40.25-40.25-40.25H72.43Z"/>
+    <g>
+      <rect class="cls-3" x="29.02" y="25.48" width="291.9" height="299.59" rx="43.25" ry="43.25"/>
+      <path class="cls-5" d="M277.67,328.08H72.27c-25.5,0-46.25-20.75-46.25-46.25V68.74c0-25.5,20.75-46.25,46.25-46.25h205.39c25.5,0,46.25,20.75,46.25,46.25v213.09c0,25.5-20.75,46.25-46.25,46.25ZM72.27,28.48c-22.19,0-40.25,18.06-40.25,40.25v213.09c0,22.2,18.06,40.25,40.25,40.25h205.39c22.19,0,40.25-18.06,40.25-40.25V68.74c0-22.2-18.06-40.25-40.25-40.25H72.27Z"/>
+    </g>
+    <rect class="cls-2" x=".09" y="220.61" width="220.21" height="26"/>
+    <rect class="cls-2" x="246.3" y="220.61" width="103.54" height="26"/>
+    <rect class="cls-1" x="246.3" y="104.45" width="103.54" height="25"/>
+    <rect class="cls-1" x=".09" y="104.45" width="220.21" height="25"/>
+    <rect class="cls-2" x="220.3" y=".41" width="26" height="104.04"/>
+    <rect class="cls-2" x="220.3" y="129.45" width="26" height="91.17"/>
+    <rect class="cls-2" x="220.3" y="246.61" width="26" height="103.54"/>
+    <rect class="cls-2" x="220.3" y="220.61" width="26" height="26"/>
+    <rect class="cls-2" x="220.3" y="104.45" width="26" height="25"/>
   </g>
-  <rect class="cls-2" x=".25" y="220.52" width="220.21" height="26"/>
-  <rect class="cls-2" x="246.46" y="220.52" width="103.54" height="26"/>
-  <rect class="cls-1" x="246.46" y="104.35" width="103.54" height="25"/>
-  <rect class="cls-1" x=".25" y="104.35" width="220.21" height="25"/>
-  <rect class="cls-2" x="220.46" y=".31" width="26" height="104.04"/>
-  <rect class="cls-2" x="220.46" y="129.35" width="26" height="91.17"/>
-  <rect class="cls-2" x="220.46" y="246.52" width="26" height="103.54"/>
-  <rect class="cls-2" x="220.46" y="220.52" width="26" height="26"/>
-  <rect class="cls-2" x="220.46" y="104.35" width="26" height="25"/>
+  <rect class="cls-4" x=".12" y=".12" width="350" height="350"/>
 </svg>
