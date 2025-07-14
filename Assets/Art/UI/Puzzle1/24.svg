@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350.25 350.25">
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350.25 350.34">
   <defs>
     <style>
       .cls-1 {
@@ -15,21 +15,29 @@
       }
 
       .cls-4 {
+        fill: none;
+        stroke: #d1d1d1;
+        stroke-miterlimit: 10;
+        stroke-width: .25px;
+      }
+
+      .cls-5 {
         fill: #e60f9e;
       }
     </style>
   </defs>
   <g>
-    <rect class="cls-3" x="29.18" y="25.33" width="291.9" height="299.59" rx="43.25" ry="43.25"/>
-    <path class="cls-4" d="M277.82,327.92H72.43c-25.5,0-46.25-20.75-46.25-46.25V68.58c0-25.5,20.75-46.25,46.25-46.25h205.39c25.5,0,46.25,20.75,46.25,46.25v213.09c0,25.5-20.75,46.25-46.25,46.25ZM72.43,28.33c-22.19,0-40.25,18.06-40.25,40.25v213.09c0,22.2,18.06,40.25,40.25,40.25h205.39c22.19,0,40.25-18.06,40.25-40.25V68.58c0-22.2-18.06-40.25-40.25-40.25H72.43Z"/>
+    <rect class="cls-3" x="29.02" y="25.42" width="291.9" height="299.59" rx="43.25" ry="43.25"/>
+    <path class="cls-5" d="M277.67,328.02H72.27c-25.5,0-46.25-20.75-46.25-46.25V68.67c0-25.5,20.75-46.25,46.25-46.25h205.39c25.5,0,46.25,20.75,46.25,46.25v213.09c0,25.5-20.75,46.25-46.25,46.25ZM72.27,28.42c-22.19,0-40.25,18.06-40.25,40.25v213.09c0,22.2,18.06,40.25,40.25,40.25h205.39c22.19,0,40.25-18.06,40.25-40.25V68.67c0-22.2-18.06-40.25-40.25-40.25H72.27Z"/>
   </g>
-  <rect class="cls-2" x="220.46" y="350" width="26" height=".12"/>
-  <rect class="cls-2" x="220.46" y="350.12" width="26" height=".12"/>
-  <rect class="cls-4" x="129.29" y="0" width="91.17" height=".12"/>
-  <rect class="cls-1" x="104.29" y="0" width="25" height=".12"/>
-  <rect class="cls-1" x="104.29" y=".12" width="25" height=".12"/>
-  <rect class="cls-2" x="220.46" y=".25" width="26" height="349.75"/>
-  <rect class="cls-2" x="220.46" y="0" width="26" height=".12"/>
-  <rect class="cls-2" x="220.46" y=".12" width="26" height=".12"/>
-  <polygon class="cls-1" points="104.29 104.29 .25 104.29 .25 129.29 129.29 129.29 129.29 .25 104.29 .25 104.29 104.29"/>
+  <rect class="cls-2" x="220.3" y="350.09" width="26" height=".12"/>
+  <rect class="cls-2" x="220.3" y="350.22" width="26" height=".12"/>
+  <rect class="cls-5" x="129.14" y=".09" width="91.17" height=".12"/>
+  <rect class="cls-1" x="104.14" y=".09" width="25" height=".12"/>
+  <rect class="cls-1" x="104.14" y=".22" width="25" height=".12"/>
+  <rect class="cls-2" x="220.3" y=".34" width="26" height="349.75"/>
+  <rect class="cls-2" x="220.3" y=".09" width="26" height=".12"/>
+  <rect class="cls-2" x="220.3" y=".22" width="26" height=".12"/>
+  <polygon class="cls-1" points="104.14 104.39 .09 104.39 .09 129.39 129.14 129.39 129.14 .34 104.14 .34 104.14 104.39"/>
+  <rect class="cls-4" x=".13" y=".12" width="350" height="350"/>
 </svg>
