@@ -26,7 +26,9 @@ public class ThirdPersonController : MonoBehaviour
    //Animation
    [SerializeField] private Animator animator;
    private float sadTimer = 30f;
-   
+
+   //Sound Effects
+   public AudioSource pasos;
 
    private void Awake()
    {
