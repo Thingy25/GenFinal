@@ -96,8 +96,8 @@ public class ThirdPersonController : MonoBehaviour
 
    private void CameraZoom()
    {
-      cinemachineCamera.Lens.FieldOfView = Mathf.Lerp(originalFOV, 40f, 3f);
-      rotationComposer.TargetOffset = new Vector3(Mathf.Lerp(0,1,3f), 0, 0);
+      cinemachineCamera.Lens.FieldOfView = Mathf.Lerp(originalFOV, 50f, 3f);
+      rotationComposer.TargetOffset = new Vector3(Mathf.Lerp(0,2,3f), 0, 0);
    }
    
 
