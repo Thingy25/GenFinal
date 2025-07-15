@@ -8344,7 +8344,7 @@ MonoBehaviour:
   cinemachineCamera: {fileID: 3725572594558005570}
   rotationComposer: {fileID: 7278923352681279291}
   originalFOV: 80
-  animator: {fileID: 0}
+  animator: {fileID: 4321413708779511380}
 --- !u!1 &4608376073020035705
 GameObject:
   m_ObjectHideFlags: 0
