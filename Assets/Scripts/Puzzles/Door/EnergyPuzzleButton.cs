@@ -6,7 +6,10 @@ public class EnergyPuzzleButton : MonoBehaviour
     Button puzzleButton;
     RectTransform rectTransform;
     public Vector3 correctPos;
-    int[] possibleRotations = new int[4] {90, 180, -90, -180};
+    int[] possibleRotations = new int[4] { 90, 180, -90, -180 };
+    public bool isCorrect;
+    [SerializeField]
+    PuzzleBrain brain;
     private void Awake()
     {
         puzzleButton = GetComponent<Button>();
@@ -32,7 +35,12 @@ public class EnergyPuzzleButton : MonoBehaviour
         //Debug.Log(rectTransform.eulerAngles.z);
         if (rectTransform.eulerAngles.z < correctPos.z + 0.1 && rectTransform.eulerAngles.z > correctPos.z - 0.1)
         {
-            Debug.Log("CORRETECUMME");
+            isCorrect = true;
+            brain.CheckCompletion();
+            Debug.Log("CORRETECUMME" + isCorrect);
+        }else
+        {
+            isCorrect = false;
         }
     }
 }

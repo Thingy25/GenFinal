@@ -2,8 +2,5 @@ using UnityEngine;
 
 public interface IBreakables
 {
-    void OnThrowableHit()
-    {
-
-    }
+    void OnThrowableHit();
 }

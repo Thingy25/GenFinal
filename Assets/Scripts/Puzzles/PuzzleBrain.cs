@@ -1,21 +1,15 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-public class PuzzleBrain : MonoBehaviour
+public abstract class PuzzleBrain : MonoBehaviour
 {
-    int successScore = 0;
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void CheckCompletion()
-    {
 
     }
+
+    public abstract void CheckCompletion();
+
+    protected abstract void OnPuzzleCompleted();
+
 }
