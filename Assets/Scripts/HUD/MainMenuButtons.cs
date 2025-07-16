@@ -6,6 +6,6 @@ public class MainMenuButtons : MonoBehaviour
 {
    public void LoadGameScene()
    {
-       SceneManager.LoadScene("Nivel1");
+       SceneManager.LoadScene("Assets/hannah/dentro 1");
    }
 }
