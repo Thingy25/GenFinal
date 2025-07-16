@@ -8,12 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 915b2bf918f23d745ab3c90deae1b7c5
-  - enabled: 0
-    path: Assets/Scenes/PlayerControllerTest.unity
-    guid: ab1b3019812f400489bfb1cd12ad959a
   - enabled: 1
-    path: Assets/Scenes/PuzzleTesting.unity
-    guid: 506500dc6036053498cd8a7c61685e3f
+    path: Assets/Scenes/Nivel1.unity
+    guid: a5ad860d70d2d40438f37723d66f8321
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 20de64e16cdb7ec41bcbeab67d7b279e, type: 3}
   m_UseUCBPForAssetBundles: 0

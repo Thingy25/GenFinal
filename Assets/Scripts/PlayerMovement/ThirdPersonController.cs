@@ -26,9 +26,13 @@ public class ThirdPersonController : MonoBehaviour
    //Animation
    [SerializeField] private Animator animator;
    private float sadTimer = 30f;
-
+   
    //Sound Effects
    public AudioSource pasos;
+   
+   //Conditionals
+   public bool CanWalk = true;
+
 
    private void Awake()
    {
@@ -74,19 +78,21 @@ public class ThirdPersonController : MonoBehaviour
 
    private void FixedUpdate()
    {
-      animator.SetFloat("RunValue", move.ReadValue<Vector2>() .magnitude);
-      
-      forceDirection += move.ReadValue<Vector2>().x * GetCameraRight(playerCamera) * movementForce;
-      forceDirection += move.ReadValue<Vector2>().y * GetCameraForward(playerCamera) * movementForce;
-      
-      rb.AddForce(forceDirection, ForceMode.Impulse);
-      forceDirection = Vector3.zero;
-
-      if (rb.linearVelocity.y < 0f)
+      if (CanWalk)
       {
-         rb.linearVelocity += Vector3.down * Physics.gravity.y * Time.fixedDeltaTime;
-      }
+         animator.SetFloat("RunValue", move.ReadValue<Vector2>() .magnitude);
       
+         forceDirection += move.ReadValue<Vector2>().x * GetCameraRight(playerCamera) * movementForce;
+         forceDirection += move.ReadValue<Vector2>().y * GetCameraForward(playerCamera) * movementForce;
+      
+         rb.AddForce(forceDirection, ForceMode.Impulse);
+         forceDirection = Vector3.zero;
+
+         if (rb.linearVelocity.y < 0f)
+         {
+            rb.linearVelocity += Vector3.down * Physics.gravity.y * Time.fixedDeltaTime;
+         }
+      }
       LookAt();
    }
 
@@ -98,8 +104,8 @@ public class ThirdPersonController : MonoBehaviour
 
    private void CameraZoom()
    {
-      cinemachineCamera.Lens.FieldOfView = Mathf.Lerp(originalFOV, 40f, 3f);
-      rotationComposer.TargetOffset = new Vector3(Mathf.Lerp(0,1,3f), 0, 0);
+      cinemachineCamera.Lens.FieldOfView = Mathf.Lerp(originalFOV, 50f, 3f);
+      rotationComposer.TargetOffset = new Vector3(Mathf.Lerp(0,2,3f), 0, 0);
    }
    
 
@@ -156,5 +162,12 @@ public class ThirdPersonController : MonoBehaviour
       if (Physics.Raycast(ray, out RaycastHit hit, 0.3f)) return true;
       else return false;
    }
+
+   public void ChangeWalkBool()
+   {
+      if (CanWalk) CanWalk = false;
+      else CanWalk = true;
+   }
+   
    
 }
