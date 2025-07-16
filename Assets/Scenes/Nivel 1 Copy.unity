@@ -5711,8 +5711,10 @@ MonoBehaviour:
   audioSource: {fileID: 276596923}
   puzzleSolvedClip: {fileID: 8300000, guid: 7cb9c073fcd277444881ea2ad8f03872, type: 3}
   confettiVFX: {fileID: 1279313715}
+  confettiDuration: 2
   doorToMove: {fileID: 632887481}
   doorMoveAmount: 2
+  doorMoveDuration: 1
   mainCamera: {fileID: 526613169}
   doorCamera: {fileID: 1020092541}
   cameraWaitTime: 2
@@ -11804,8 +11806,10 @@ MonoBehaviour:
   audioSource: {fileID: 728395613}
   puzzleSolvedClip: {fileID: 8300000, guid: 7cb9c073fcd277444881ea2ad8f03872, type: 3}
   confettiVFX: {fileID: 1132932385}
+  confettiDuration: 2
   doorToMove: {fileID: 632887481}
   doorMoveAmount: 2
+  doorMoveDuration: 1
   mainCamera: {fileID: 526613169}
   doorCamera: {fileID: 1020092541}
   cameraWaitTime: 2
@@ -34417,8 +34421,10 @@ MonoBehaviour:
   audioSource: {fileID: 1448221548}
   puzzleSolvedClip: {fileID: 8300000, guid: 7cb9c073fcd277444881ea2ad8f03872, type: 3}
   confettiVFX: {fileID: 1096752294}
+  confettiDuration: 2
   doorToMove: {fileID: 632887481}
   doorMoveAmount: 2
+  doorMoveDuration: 1
   mainCamera: {fileID: 526613169}
   doorCamera: {fileID: 1020092541}
   cameraWaitTime: 2
@@ -44490,6 +44496,8 @@ MonoBehaviour:
   rotationComposer: {fileID: 7278923352681279291}
   originalFOV: 80
   animator: {fileID: 4321413708779511380}
+  pasos: {fileID: 0}
+  CanWalk: 1
 --- !u!1 &4608376073020035705
 GameObject:
   m_ObjectHideFlags: 0
