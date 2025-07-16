@@ -21,7 +21,7 @@ public class PlayerPickUpProp : MonoBehaviour
     {
         if (objectGrabbable == null)
         {
-            CheckInteract();
+           // CheckInteract();
         }
         else
         {
@@ -69,6 +69,32 @@ public class PlayerPickUpProp : MonoBehaviour
         }
       
        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Interactable") && objectGrabbable == null)
+        {
+            InteractableObject newInteractable = other.GetComponent<InteractableObject>();
+            if (currentInteractable && newInteractable != currentInteractable)
+            {
+                currentInteractable.DisableOutLine();
+            }
+            if (newInteractable.enabled)
+            {
+                SetNewCurrentInteractable(newInteractable);
+            }
+            else DisableCurrentInteractable();
+        }
+        else DisableCurrentInteractable();
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Interactable"))
+        {
+            DisableCurrentInteractable();
+        }
     }
 
     void CheckInteract()
