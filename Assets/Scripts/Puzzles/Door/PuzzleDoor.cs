@@ -15,9 +15,10 @@ public class PuzzleDoor : ActivatableObject
 
     IEnumerator OpenDoor()
     {
-        while (transform.position.x >= -1.5)
+        Debug.Log("fhwjfw");
+        while (transform.localPosition.y <= 2.5f)
         {
-            transform.Translate(-Vector3.right * 0.05f);
+            transform.Translate(Vector3.forward * 0.05f);
             yield return new WaitForSeconds(0.03f);
         }
     }
