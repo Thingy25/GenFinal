@@ -3,9 +3,9 @@ using UnityEngine;
 public class BreakableObject : MonoBehaviour, IBreakables
 {
     [SerializeField] 
-    GameObject partToBreak;
+    protected GameObject partToBreak;
     [SerializeField]
-    GameObject brokenPart;
+    protected GameObject brokenPart;
 
     bool wasbroken;
     void Start()
@@ -13,7 +13,7 @@ public class BreakableObject : MonoBehaviour, IBreakables
         //Invoke("IBreakables.OnThrowableHit", 2);
     }
 
-    void IBreakables.OnThrowableHit()
+    public virtual void OnThrowableHit()
     {
         if (!wasbroken)
         {

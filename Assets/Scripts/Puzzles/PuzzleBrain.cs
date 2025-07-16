@@ -1,21 +1,41 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PuzzleBrain : MonoBehaviour
 {
-    int successScore = 0;
+    [SerializeField]
+    ActivatableObject puzzleObjective;
+    [SerializeField]
+    List<EnergyPuzzleButton> energyButtons = new List<EnergyPuzzleButton>();
+    //int successScore = 0;
+    public int currentScore = 0;
     void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
     {
         
     }
 
     public void CheckCompletion()
     {
-
+        foreach (var obj in energyButtons)
+        {
+            if (!obj.isCorrect)
+            {
+                Debug.Log("FUCK");
+                currentScore = 0;
+                break;
+            }
+            else
+            {
+                currentScore++;
+            }
+        }
+        if (currentScore == energyButtons.Count)
+        {
+            puzzleObjective.OnActivation();
+        }
+        //if (currentScore >= successScore)
+        //{
+        //    //Call PuzzleFinished
+        //}
     }
 }
