@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using TMPro;
 public class PlayerOxygen : MonoBehaviour
@@ -21,5 +22,13 @@ public class PlayerOxygen : MonoBehaviour
     {
         int oxygenInt = (int)oxygen;
         oxygenText.text = oxygenInt + " %";
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Fire"))
+        {
+            oxygen -= 3;
+        }
     }
 }
