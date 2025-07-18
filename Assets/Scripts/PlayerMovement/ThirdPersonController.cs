@@ -15,6 +15,7 @@ public class ThirdPersonController : MonoBehaviour
    [SerializeField] private float movementForce = 1f;
    [SerializeField] private float jumpForce = 5;
    [SerializeField] private float maxSpeed = 5f;
+   [SerializeField] private float fallForce = 100f;
    private Vector3 forceDirection = Vector3.zero;
    [SerializeField] private Camera playerCamera;
    
@@ -32,6 +33,7 @@ public class ThirdPersonController : MonoBehaviour
    
    //Conditionals
    public bool CanWalk = true;
+   private bool isGrounded = true;
 
 
    private void Awake()
@@ -90,7 +92,7 @@ public class ThirdPersonController : MonoBehaviour
 
          if (rb.linearVelocity.y < 0f)
          {
-            rb.linearVelocity += Vector3.down * Physics.gravity.y * Time.fixedDeltaTime;
+           rb.AddForce(Vector3.down * fallForce* Time.fixedDeltaTime, ForceMode.Force);
          }
       }
       LookAt();
@@ -145,10 +147,12 @@ public class ThirdPersonController : MonoBehaviour
    {
       if (IsGrounded())
       {
+         animator.SetBool("IsJumping", true);
          forceDirection+= Vector3.up * jumpForce;
          rb.AddForce(forceDirection, ForceMode.Force);
          Debug.Log("Salto");
       }
+     
    }
 
    private void PauseGame(InputAction.CallbackContext obj)
@@ -159,7 +163,7 @@ public class ThirdPersonController : MonoBehaviour
    private bool IsGrounded()
    {
       Ray ray = new Ray(this.transform.position + Vector3.up * 0.25f, Vector3.down);
-      if (Physics.Raycast(ray, out RaycastHit hit, 0.3f)) return true;
+      if (Physics.Raycast(ray, out RaycastHit hit, 2f)) return true;
       else return false;
    }
 
@@ -168,6 +172,10 @@ public class ThirdPersonController : MonoBehaviour
       if (CanWalk) CanWalk = false;
       else CanWalk = true;
    }
-   
-   
+
+   private void OnCollisionEnter(Collision other)
+   {
+      if(other.gameObject.CompareTag("Ground") && isGrounded)
+         animator.SetBool("IsJumping", false);
+   }
 }
