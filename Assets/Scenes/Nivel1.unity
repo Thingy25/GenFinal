@@ -30009,6 +30009,7 @@ MonoBehaviour:
   movementForce: 1
   jumpForce: 10
   maxSpeed: 5
+  fallForce: 100
   playerCamera: {fileID: 526613169}
   cinemachineCamera: {fileID: 3725572594558005570}
   rotationComposer: {fileID: 7278923352681279291}
@@ -35369,7 +35370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetOffset: {x: 0, y: 0, z: 0}
   TrackerSettings:
-    BindingMode: 3
+    BindingMode: 4
     PositionDamping: {x: 1, y: 1, z: 1}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
