@@ -215,8 +215,8 @@ public partial class @ThirdPersonAction: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""c49dedbc-d474-4cf3-aa53-d95ad1e0ce63"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""id"": ""a5eff864-5cce-451f-ab34-c19a3c357d52"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -226,8 +226,8 @@ public partial class @ThirdPersonAction: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""a5eff864-5cce-451f-ab34-c19a3c357d52"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""id"": ""c49dedbc-d474-4cf3-aa53-d95ad1e0ce63"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
