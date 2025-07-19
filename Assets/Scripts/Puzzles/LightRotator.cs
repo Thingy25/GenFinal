@@ -177,22 +177,24 @@ public class LightRotator : MonoBehaviour
         // Esperar para ver la puerta
         yield return new WaitForSeconds(cameraWaitTime);
 
+        LevelManager.Instance.CallNextLevelBeat();
+
         // Mover puerta suavemente
-        if (doorToMove != null)
-        {
-            Vector3 startPos = doorToMove.position;
-            Vector3 endPos = startPos + Vector3.up * doorMoveAmount;
+        //if (doorToMove != null)
+        //{
+        //    Vector3 startPos = doorToMove.position;
+        //    Vector3 endPos = startPos + Vector3.up * doorMoveAmount;
 
-            float elapsed = 0f;
-            while (elapsed < doorMoveDuration)
-            {
-                elapsed += Time.deltaTime;
-                doorToMove.position = Vector3.Lerp(startPos, endPos, elapsed / doorMoveDuration);
-                yield return null;
-            }
+        //    float elapsed = 0f;
+        //    while (elapsed < doorMoveDuration)
+        //    {
+        //        elapsed += Time.deltaTime;
+        //        doorToMove.position = Vector3.Lerp(startPos, endPos, elapsed / doorMoveDuration);
+        //        yield return null;
+        //    }
 
-            doorToMove.position = endPos;
-        }
+        //    doorToMove.position = endPos;
+        //}
 
         // Volver a la cámara principal
         if (doorCamera != null && mainCamera != null)

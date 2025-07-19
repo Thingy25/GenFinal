@@ -7,7 +7,7 @@ public class PuzzlePanel : MonoBehaviour
     [SerializeField]
     int respectiveLvlBeat;
 
-    bool canBeInteracted = false;
+    public bool canBeInteracted = false;
     void Start()
     {
         LevelManager.OnLevelBeatChange += CanBeInteracted;

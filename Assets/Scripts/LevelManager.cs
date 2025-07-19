@@ -7,6 +7,8 @@ public class LevelManager : MonoBehaviour
     public delegate void LevelBeatChange(int levelBeat);
     public static event LevelBeatChange OnLevelBeatChange;
 
+    int currentLvlBeat = 0;
+
     void Awake()
     {
         if (Instance == null)
@@ -19,9 +21,9 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CallNextLevelBeat()
     {
-        
+        currentLvlBeat++;
+        OnLevelBeatChange?.Invoke(currentLvlBeat);
     }
 }
