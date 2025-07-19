@@ -4,23 +4,32 @@ public class PuzzlePanel : MonoBehaviour
 {
     [SerializeField]
     GameObject CanvasToOpen;
+    [SerializeField]
+    int respectiveLvlBeat;
+
+    bool canBeInteracted = false;
     void Start()
     {
-        
+        LevelManager.OnLevelBeatChange += CanBeInteracted;
     }
 
-    // Update is called once per frame
-    void Update()
+    void CanBeInteracted(int currentBeat)
     {
-        
+        if (currentBeat == respectiveLvlBeat)
+        {
+            canBeInteracted = true;
+        }
     }
 
     public void ActivatePuzzleCanvas()
     {
-        CanvasToOpen.SetActive(true);
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-        Time.timeScale = 0;
-        HudManager.Instance.canPause = false;
+        if (canBeInteracted)
+        {
+            CanvasToOpen.SetActive(true);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0;
+            HudManager.Instance.canPause = false;           
+        }
     }
 }
