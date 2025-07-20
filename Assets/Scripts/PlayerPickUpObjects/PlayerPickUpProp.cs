@@ -46,14 +46,10 @@ public class PlayerPickUpProp : MonoBehaviour
     {
         if (objectGrabbable == null)
         {
-            Ray ray = new Ray(playerCameraTransform.position, playerCameraTransform.forward);
-            if (Physics.Raycast(ray, out RaycastHit rayCastHit, pickUpDistance, pickUpLayerMask))
+            if (currentInteractable.TryGetComponent(out objectGrabbable))
             {
-                if (rayCastHit.transform.TryGetComponent( out objectGrabbable))
-                {
-                    objectGrabbable.Grab(objectGrabPointTransform);
-                    Debug.Log(objectGrabbable);
-                }
+                objectGrabbable.Grab(objectGrabPointTransform);
+                Debug.Log(objectGrabbable);
             }
             
         }

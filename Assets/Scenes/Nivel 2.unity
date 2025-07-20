@@ -2694,6 +2694,10 @@ PrefabInstance:
       value: 5.84
       objectReference: {fileID: 0}
     - target: {fileID: 6690001840884418483, guid: b59d0ae955ad5994f937e8ed893b172c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.132
+      objectReference: {fileID: 0}
+    - target: {fileID: 6690001840884418483, guid: b59d0ae955ad5994f937e8ed893b172c, type: 3}
       propertyPath: m_LocalPosition.z
       value: 1.17
       objectReference: {fileID: 0}
@@ -7840,6 +7844,8 @@ MonoBehaviour:
   interactionText: {fileID: 1093661448}
   pausePanel: {fileID: 1291559399}
   crossHair: {fileID: 1130701326}
+  deathPanel: {fileID: 0}
+  oxygenText: {fileID: 0}
   isGamePaused: 0
   canPause: 1
 --- !u!114 &1195489915
