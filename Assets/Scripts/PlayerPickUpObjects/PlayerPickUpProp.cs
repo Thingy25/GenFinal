@@ -44,7 +44,7 @@ public class PlayerPickUpProp : MonoBehaviour
 
     private void OnPick(InputAction.CallbackContext context)
     {
-        if (objectGrabbable == null)
+        if (objectGrabbable == null && currentInteractable!= null)
         {
             if (currentInteractable.TryGetComponent(out objectGrabbable))
             {
@@ -53,7 +53,7 @@ public class PlayerPickUpProp : MonoBehaviour
             }
             
         }
-        else
+        else if(objectGrabbable != null)
         {
             objectGrabbable.Drop(playerCameraTransform.forward);
             objectGrabbable = null;
