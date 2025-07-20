@@ -25,7 +25,7 @@ public class FireObstacle : MonoBehaviour
         {
             dmgCoroutine = StartCoroutine(DealDamageOvTime(damageable));
         }
-        ISpecialProps prop = other.GetComponent<ISpecialProps>();
+        //ISpecialProps prop = other.TryGetComponent<ISpecialProps>(out );//other.GetComponent<ISpecialProps>()
     }
 
     private void OnTriggerExit(Collider other)
