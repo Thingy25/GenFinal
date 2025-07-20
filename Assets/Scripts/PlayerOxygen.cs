@@ -1,27 +1,61 @@
 using System;
 using UnityEngine;
 using TMPro;
-public class PlayerOxygen : MonoBehaviour
+public class PlayerOxygen : MonoBehaviour, IDamageable
 {
+    public delegate void PlayerDeathEvent();
+    public static event PlayerDeathEvent OnPlayerDeath;
+    public delegate void UpdateUI(int currentOxygen);
+    public static event UpdateUI OnUIValueChanged;
+
     private float oxygen = 100;
-    [SerializeField] private TextMeshProUGUI oxygenText;
+    readonly float maxOxygen = 100;
+    //[SerializeField] private TextMeshProUGUI oxygenText;
+    [SerializeField]
+    GameObject helmet; //Put helmet on + update UI text & add recharge functionality
+
+    bool hasHelmet = false;
+    int health = 100;
     
     
     void Start()
     {
+        PlayerHelmet.OnHelmetEnabled += PutHelmetOn;
         UpdateOxygenText();
     }
     
     void Update()
     {
-        oxygen -= 0.5f * Time.deltaTime;
-        UpdateOxygenText();
+        if (!hasHelmet)
+        {
+            oxygen -= 0.5f * Time.deltaTime;
+            UpdateOxygenText();
+        }
+        
     }
 
     void UpdateOxygenText()
     {
         int oxygenInt = (int)oxygen;
-        oxygenText.text = oxygenInt + " %";
+        OnUIValueChanged?.Invoke(oxygenInt);
+        //oxygenText.text = oxygenInt + " %";
+    }
+
+    void IDamageable.ReceiveDamage(int damage)
+    {
+        health -= damage;
+        Debug.Log(health);
+        Mathf.Clamp(health, 0, 100);
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        OnPlayerDeath?.Invoke();
+        HudManager.Instance.ActivateDeathPanel();
     }
 
     private void OnCollisionEnter(Collision other)
@@ -30,5 +64,16 @@ public class PlayerOxygen : MonoBehaviour
         {
             oxygen -= 3;
         }
+    }
+
+    void PutHelmetOn()
+    {
+        helmet.SetActive(true);
+        hasHelmet = true;
+    }
+
+    private void OnDisable()
+    {
+        PlayerHelmet.OnHelmetEnabled -= PutHelmetOn;
     }
 }
