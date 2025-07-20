@@ -54,7 +54,7 @@ public class Rune : MonoBehaviour
             {
                 isActivate = false;
                 StartCoroutine(FadeEmission(minIntensity, duration));
-                RunesManager.Instance.OneMoreActivated();
+                RunesManager.Instance.OneLessActivated();;
             }
         }
     }

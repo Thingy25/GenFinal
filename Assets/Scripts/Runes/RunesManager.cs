@@ -4,7 +4,8 @@ using UnityEngine;
 public class RunesManager : MonoBehaviour
 {
     public static RunesManager Instance;
-    private int totalActivated = 0;
+    public int totalActivated = 0;
+    [SerializeField] private StoneGate stoneGateScript;
 
     private void Awake()
     {
@@ -21,7 +22,7 @@ public class RunesManager : MonoBehaviour
     {
         if (totalActivated == 5)
         {
-            //Activar animacion puerta
+            stoneGateScript.OpenTheGate();
             Debug.Log("Abrete sesamo");
         }
     }
