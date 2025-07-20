@@ -7,6 +7,10 @@ public class HudManager : MonoBehaviour
     [SerializeField] private TMP_Text interactionText;
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject crossHair;
+    [SerializeField]
+    GameObject deathPanel;
+    [SerializeField]
+    TextMeshProUGUI oxygenText;
     public bool isGamePaused = false;
     public bool canPause = true;
     
@@ -23,7 +27,8 @@ public class HudManager : MonoBehaviour
         else 
         { 
             Instance = this; 
-        } 
+        }
+        PlayerOxygen.OnUIValueChanged += UpdateOxygenText;
     }
 
     public void EnableInteraction(string text)
@@ -75,6 +80,18 @@ public class HudManager : MonoBehaviour
     public void DesactiveCrossHair()
     {
         crossHair.SetActive(false);
+    }
+
+    public void ActivateDeathPanel()
+    {
+        Time.timeScale = 0;
+        canPause = false;
+        deathPanel.SetActive(true);
+    }
+
+    void UpdateOxygenText(int newText)
+    {
+        oxygenText.text = newText + "%";
     }
     
   
