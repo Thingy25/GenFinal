@@ -43,10 +43,10 @@ public class PlayerOxygen : MonoBehaviour, IDamageable
 
     void IDamageable.ReceiveDamage(int damage)
     {
-        health -= damage;
+        oxygen -= damage;
         Debug.Log(health);
-        Mathf.Clamp(health, 0, 100);
-        if (health <= 0)
+        Mathf.Clamp(oxygen, 0, maxOxygen);
+        if (oxygen <= 0)
         {
             Die();
         }
