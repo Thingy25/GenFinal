@@ -20,12 +20,16 @@ public class FireObstacle : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        IDamageable damageable = other.GetComponent<IDamageable>();
-        if (damageable != null)
+        if (other.TryGetComponent<IDamageable>(out var damageable))
         {
             dmgCoroutine = StartCoroutine(DealDamageOvTime(damageable));
         }
-        //ISpecialProps prop = other.TryGetComponent<ISpecialProps>(out );//other.GetComponent<ISpecialProps>()
+        ISpecialProps prop = other.GetComponent<ISpecialProps>(); //other.TryGetComponent<ISpecialProps>(out );
+        if (other.TryGetComponent<ISpecialProps>(out var extinguisher))
+        {
+            extinguisher.PerformSpecialAction();
+            StartCoroutine(StopFire());
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -44,5 +48,10 @@ public class FireObstacle : MonoBehaviour
             yield return new WaitForSeconds(0.35f);
             damageable.ReceiveDamage(damageAmount);
         }
+    }
+
+    IEnumerator StopFire()
+    {
+        yield return new WaitForSeconds(3); this.gameObject.SetActive(false);
     }
 }
