@@ -4645,6 +4645,18 @@ PlayableDirector:
     value: {fileID: 553554826}
   - key: {fileID: -9039586351301706039, guid: ee1d839001951d84b9bb590118baef01, type: 2}
     value: {fileID: 989784641}
+  - key: {fileID: -1547744133881020836, guid: ee1d839001951d84b9bb590118baef01, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 7543336059095540553, guid: ee1d839001951d84b9bb590118baef01, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 2879481853408206101, guid: ee1d839001951d84b9bb590118baef01, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8442162616540757312, guid: ee1d839001951d84b9bb590118baef01, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 8879097428823041330, guid: ee1d839001951d84b9bb590118baef01, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -829995075687517386, guid: ee1d839001951d84b9bb590118baef01, type: 2}
+    value: {fileID: 872729404}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1660589782
@@ -6009,7 +6021,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083566719}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83574e0de04532b4e98b6a73837625e4, type: 3}
   m_Name: 
@@ -6053,7 +6065,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083566719}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef2cb0c55ebd9074dbc088685768af0b, type: 3}
   m_Name: 
@@ -6061,6 +6073,7 @@ MonoBehaviour:
   movementForce: 1
   jumpForce: 10
   maxSpeed: 5
+  fallForce: 100
   playerCamera: {fileID: 0}
   cinemachineCamera: {fileID: 0}
   rotationComposer: {fileID: 0}
