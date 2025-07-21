@@ -87,6 +87,8 @@ public class HudManager : MonoBehaviour
         Time.timeScale = 0;
         canPause = false;
         deathPanel.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     void UpdateOxygenText(int newText)
