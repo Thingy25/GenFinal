@@ -28,7 +28,7 @@ public class PlayerOxygen : MonoBehaviour, IDamageable
     {
         if (!hasHelmet)
         {
-            oxygen -= 0.75f * Time.deltaTime;
+            oxygen -= 0.5f * Time.deltaTime;
             Mathf.Clamp(oxygen, 0, maxOxygen);
             UpdateOxygenText();
             if (oxygen <= 0)
