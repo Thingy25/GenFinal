@@ -3,9 +3,9 @@
   <defs>
     <style>
       .cls-1 {
-        fill: #00f3ff;
+        fill: #fff;
       }
     </style>
   </defs>
-  <rect class="cls-1" width="399.09" height="61.47"/>
+  <rect class="cls-1" x="0" y="0" width="399.09" height="61.47"/>
 </svg>
