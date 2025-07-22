@@ -414,6 +414,7 @@ MonoBehaviour:
   - {fileID: 7562751168465791797}
   - {fileID: 6134040817531997017}
   - {fileID: 8478090165394559690}
+  feedbackText: {fileID: 5178315450288064233}
   currentScore: 0
 --- !u!1001 &7798078646909250083
 PrefabInstance:
@@ -431,30 +432,6 @@ PrefabInstance:
       propertyPath: brain
       value: 
       objectReference: {fileID: 1493794735149849814}
-    - target: {fileID: 563569731732696386, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 719369024065681643, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 767056815777951047, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1148027990446337518, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1473283776898072047, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1473283776898072047, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1746679939430389132, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
       propertyPath: brain
       value: 
@@ -471,57 +448,13 @@ PrefabInstance:
       propertyPath: brain
       value: 
       objectReference: {fileID: 1493794735149849814}
-    - target: {fileID: 2262024301137863399, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2522401324157008430, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
       propertyPath: brain
       value: 
       objectReference: {fileID: 1493794735149849814}
-    - target: {fileID: 2648591739103956769, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3163010462174670026, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
       propertyPath: m_text
-      value: NO ENERGY
-      objectReference: {fileID: 0}
-    - target: {fileID: 3163010462174670026, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3163010462174670026, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0.0658081
-      objectReference: {fileID: 0}
-    - target: {fileID: 3163010462174670026, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_fontColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3163010462174670026, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4278194687
-      objectReference: {fileID: 0}
-    - target: {fileID: 3312736505417619872, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3410475901489290263, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3843622311692922303, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3925012210541783872, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.1476882
-      objectReference: {fileID: 0}
-    - target: {fileID: 3925012210541783872, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.1199981
+      value: "Sin energ\xEDa"
       objectReference: {fileID: 0}
     - target: {fileID: 4040318259614660499, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
       propertyPath: brain
@@ -615,18 +548,6 @@ PrefabInstance:
       propertyPath: brain
       value: 
       objectReference: {fileID: 1493794735149849814}
-    - target: {fileID: 4479014079049867015, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5069181450412135952, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5503304828930982531, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5689067272808483197, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
       propertyPath: brain
       value: 
@@ -635,64 +556,27 @@ PrefabInstance:
       propertyPath: brain
       value: 
       objectReference: {fileID: 1493794735149849814}
-    - target: {fileID: 6579389291481612564, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6715357263941711018, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
       propertyPath: brain
       value: 
       objectReference: {fileID: 1493794735149849814}
-    - target: {fileID: 6726889707393259050, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6785120241091061335, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
       propertyPath: m_Name
       value: CanvasPuzzle1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6785120241091061335, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6870251396039680892, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
       propertyPath: brain
       value: 
       objectReference: {fileID: 1493794735149849814}
-    - target: {fileID: 7057291562593996910, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.1838487
-      objectReference: {fileID: 0}
-    - target: {fileID: 7057291562593996910, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.1476882
-      objectReference: {fileID: 0}
-    - target: {fileID: 7057291562593996910, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.1199981
-      objectReference: {fileID: 0}
-    - target: {fileID: 7287511482223592670, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7348896175380085206, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7846388092836311436, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
       propertyPath: brain
       value: 
       objectReference: {fileID: 1493794735149849814}
-    - target: {fileID: 8824325052945591254, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9194764605735775835, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
       propertyPath: brain
       value: 
       objectReference: {fileID: 1493794735149849814}
-    m_RemovedComponents:
-    - {fileID: 1085235296990873880, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -766,6 +650,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47bb0b12b3ecaeb40aa7f1759e301cbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5178315450288064233 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3163010462174670026, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+  m_PrefabInstance: {fileID: 7798078646909250083}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &5708604539378061325 stripped

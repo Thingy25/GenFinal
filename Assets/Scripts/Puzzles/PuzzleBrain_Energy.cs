@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PuzzleBrain_Energy : PuzzleBrain
@@ -6,7 +7,9 @@ public class PuzzleBrain_Energy : PuzzleBrain
     [SerializeField]
     ActivatableObject puzzleObjective;
     [SerializeField]
-    List<EnergyPuzzleButton> energyButtons = new List<EnergyPuzzleButton>();
+    List<EnergyPuzzleButton> energyButtons = new();
+    [SerializeField]
+    TextMeshProUGUI feedbackText;
     //int successScore = 0;
     public int currentScore = 0;
     void Start()
@@ -42,5 +45,7 @@ public class PuzzleBrain_Energy : PuzzleBrain
     protected override void OnPuzzleCompleted()
     {
         puzzleObjective.OnActivation();
+        feedbackText.text = "Energía restaurada";
+        feedbackText.color = Color.green;
     }
 }
