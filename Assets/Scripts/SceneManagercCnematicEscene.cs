@@ -18,10 +18,10 @@ public class SceneManagercCnematicEscene : MonoBehaviour
 
     public void LoadScene()
     {
-        SceneManager.LoadScene("Nivel1");
+        Time.timeScale = 1;
         if (Time.timeScale != 1)
         {
-            Time.timeScale = 1;
         }
+        SceneManager.LoadScene("Nivel1");
     }
 }

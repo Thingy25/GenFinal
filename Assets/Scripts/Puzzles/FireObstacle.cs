@@ -37,6 +37,7 @@ public class FireObstacle : MonoBehaviour
         IDamageable damageable = other.GetComponent<IDamageable>();
         if (damageable != null)
         {
+            Debug.Log("dnsjflw");
             StopCoroutine(dmgCoroutine);
         }
     }

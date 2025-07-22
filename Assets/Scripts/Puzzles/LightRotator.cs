@@ -46,8 +46,8 @@ public class LightRotator : MonoBehaviour
     public Transform doorToMove;
     public float doorMoveAmount = 2f;
     public float doorMoveDuration = 1f;
-    public Camera mainCamera;
-    public Camera doorCamera;
+    //public Camera mainCamera;
+    public GameObject doorCamera;
     public float cameraWaitTime = 2f;
 
     private int selectedIndex = 0;
@@ -57,12 +57,13 @@ public class LightRotator : MonoBehaviour
     void Start()
     {
         UpdateVisuals();
-        if (doorCamera != null) doorCamera.enabled = false;
+        if (doorCamera != null) doorCamera.SetActive(false);
     }
 
     void Update()
     {
         if (puzzleSolved || playerTransform == null) return;
+        //Debug.Log(Vector3.Distance(transform.position, playerTransform.position));
         if (Vector3.Distance(transform.position, playerTransform.position) > interactionDistance) return;
 
         float scroll = Mouse.current.scroll.ReadValue().y;
@@ -74,6 +75,7 @@ public class LightRotator : MonoBehaviour
 
         if (Keyboard.current.qKey.wasPressedThisFrame)
         {
+            Debug.Log("edjldlw");
             if (!activeIndices.Contains(selectedIndex) && activeIndices.Count < 7)
             {
                 activeIndices.Add(selectedIndex);
@@ -86,6 +88,7 @@ public class LightRotator : MonoBehaviour
         {
             if (activeIndices.Contains(selectedIndex))
             {
+                Debug.Log("dnslcskl");
                 activeIndices.Remove(selectedIndex);
                 UpdateVisuals();
                 CheckPuzzleSolution();
@@ -141,6 +144,7 @@ public class LightRotator : MonoBehaviour
 
         puzzleSolved = true;
         Debug.Log("¡Puzzle resuelto!");
+        LevelManager.Instance.CallNextLevelBeat();
         UpdateVisuals();
 
         if (audioSource && puzzleSolvedClip)
@@ -168,39 +172,39 @@ public class LightRotator : MonoBehaviour
         yield return new WaitForSeconds(confettiDuration);
 
         // Cambiar cámara
-        if (doorCamera != null && mainCamera != null)
+        if (doorCamera != null) //&& mainCamera != null)
         {
-            mainCamera.enabled = false;
-            doorCamera.enabled = true;
+            //mainCamera.enabled = false;
+            doorCamera.SetActive(true);
         }
 
         // Esperar para ver la puerta
         yield return new WaitForSeconds(cameraWaitTime);
 
-        LevelManager.Instance.CallNextLevelBeat();
+
 
         // Mover puerta suavemente
-        //if (doorToMove != null)
-        //{
-        //    Vector3 startPos = doorToMove.position;
-        //    Vector3 endPos = startPos + Vector3.up * doorMoveAmount;
+        if (doorToMove != null)
+        {
+            Vector3 startPos = doorToMove.position;
+            Vector3 endPos = startPos + Vector3.up * doorMoveAmount;
 
-        //    float elapsed = 0f;
-        //    while (elapsed < doorMoveDuration)
-        //    {
-        //        elapsed += Time.deltaTime;
-        //        doorToMove.position = Vector3.Lerp(startPos, endPos, elapsed / doorMoveDuration);
-        //        yield return null;
-        //    }
+            float elapsed = 0f;
+            while (elapsed < doorMoveDuration)
+            {
+                elapsed += Time.deltaTime;
+                doorToMove.position = Vector3.Lerp(startPos, endPos, elapsed / doorMoveDuration);
+                yield return null;
+            }
 
-        //    doorToMove.position = endPos;
-        //}
+            doorToMove.position = endPos;
+        }
 
         // Volver a la cámara principal
-        if (doorCamera != null && mainCamera != null)
+        if (doorCamera != null)
         {
-            doorCamera.enabled = false;
-            mainCamera.enabled = true;
+            doorCamera.SetActive(false);
+            //mainCamera.enabled = true;
         }
 
         // Restaurar movimiento
