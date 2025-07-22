@@ -33,6 +33,7 @@ public class AlertIcon : MonoBehaviour
       alertaIcono.SetActive(false);
       oxigenoIcono.SetActive(true);
       StartCoroutine(StartBlinkIzquierdo());
+      ObjetiveManagerLevel1.Instance.SetPuzzleSprite();
    }
 
    public void SetColorIZquierda()
@@ -40,6 +41,7 @@ public class AlertIcon : MonoBehaviour
       blinkAlaIzquierda = false;
       oxigenoIcono.SetActive(false);
       StartCoroutine(StartExitBlink());
+      ObjetiveManagerLevel1.Instance.SetPanelSprite();
    }
 
    IEnumerator StartBlinkDerecha()
