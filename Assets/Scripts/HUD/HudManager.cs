@@ -84,7 +84,7 @@ public class HudManager : MonoBehaviour
 
     public void ActivateDeathPanel()
     {
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         canPause = false;
         deathPanel.SetActive(true);
         Cursor.lockState = CursorLockMode.None;

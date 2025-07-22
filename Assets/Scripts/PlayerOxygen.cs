@@ -29,7 +29,12 @@ public class PlayerOxygen : MonoBehaviour, IDamageable
         if (!hasHelmet)
         {
             oxygen -= 0.5f * Time.deltaTime;
+            Mathf.Clamp(oxygen, 0, maxOxygen);
             UpdateOxygenText();
+            if (oxygen <= 0)
+            {
+                Die();
+            }
         }
         
     }
@@ -60,10 +65,10 @@ public class PlayerOxygen : MonoBehaviour, IDamageable
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Fire"))
-        {
-            oxygen -= 3;
-        }
+        //if (other.gameObject.CompareTag("Fire"))
+        //{
+        //    oxygen -= 3;
+        //}
     }
 
     void PutHelmetOn()
