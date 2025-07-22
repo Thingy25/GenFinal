@@ -10,6 +10,8 @@ public class PuzzleBrain_Energy : PuzzleBrain
     List<EnergyPuzzleButton> energyButtons = new();
     [SerializeField]
     TextMeshProUGUI feedbackText;
+    [SerializeField]
+    GameObject extraConnections;
     //int successScore = 0;
     public int currentScore = 0;
     void Start()
@@ -47,5 +49,6 @@ public class PuzzleBrain_Energy : PuzzleBrain
         puzzleObjective.OnActivation();
         feedbackText.text = "Energía restaurada";
         feedbackText.color = Color.green;
+        extraConnections.SetActive(true);
     }
 }

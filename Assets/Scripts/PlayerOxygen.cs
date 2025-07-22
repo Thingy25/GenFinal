@@ -12,10 +12,9 @@ public class PlayerOxygen : MonoBehaviour, IDamageable
     readonly float maxOxygen = 100;
     //[SerializeField] private TextMeshProUGUI oxygenText;
     [SerializeField]
-    GameObject helmet; //Put helmet on + update UI text & add recharge functionality
+    GameObject helmet; 
 
     bool hasHelmet = false;
-    int health = 100;
     
     
     void Start()
@@ -28,7 +27,7 @@ public class PlayerOxygen : MonoBehaviour, IDamageable
     {
         if (!hasHelmet)
         {
-            oxygen -= 0.5f * Time.deltaTime;
+            oxygen -= 1.2f * Time.deltaTime;
             Mathf.Clamp(oxygen, 0, maxOxygen);
             UpdateOxygenText();
             if (oxygen <= 0)
@@ -49,7 +48,6 @@ public class PlayerOxygen : MonoBehaviour, IDamageable
     void IDamageable.ReceiveDamage(int damage)
     {
         oxygen -= damage;
-        Debug.Log(health);
         Mathf.Clamp(oxygen, 0, maxOxygen);
         if (oxygen <= 0)
         {

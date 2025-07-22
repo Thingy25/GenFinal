@@ -4763,6 +4763,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000447698}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1001187398 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5913490899683783972, guid: e53e187a37b306346b0d55c10f051739, type: 3}
+  m_PrefabInstance: {fileID: 1114173254}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1022671200
 GameObject:
   m_ObjectHideFlags: 0
@@ -5558,12 +5563,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1493794735149849814, guid: e53e187a37b306346b0d55c10f051739, type: 3}
+      propertyPath: extraConnections
+      value: 
+      objectReference: {fileID: 1001187398}
     - target: {fileID: 3607877942691892340, guid: e53e187a37b306346b0d55c10f051739, type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4186096420329890350, guid: e53e187a37b306346b0d55c10f051739, type: 3}
-      propertyPath: m_PreserveAspect
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4298015945160816593, guid: e53e187a37b306346b0d55c10f051739, type: 3}
@@ -5606,54 +5611,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4300626595691276506, guid: e53e187a37b306346b0d55c10f051739, type: 3}
-      propertyPath: respectiveLvlBeat
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5290803991171038795, guid: e53e187a37b306346b0d55c10f051739, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.19584906
-      objectReference: {fileID: 0}
-    - target: {fileID: 6503240716234015075, guid: e53e187a37b306346b0d55c10f051739, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.15524736
-      objectReference: {fileID: 0}
-    - target: {fileID: 6503240716234015075, guid: e53e187a37b306346b0d55c10f051739, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15524736
-      objectReference: {fileID: 0}
-    - target: {fileID: 6503240716234015075, guid: e53e187a37b306346b0d55c10f051739, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.15524736
-      objectReference: {fileID: 0}
-    - target: {fileID: 6503240716234015075, guid: e53e187a37b306346b0d55c10f051739, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.00000050719
-      objectReference: {fileID: 0}
-    - target: {fileID: 6503240716234015075, guid: e53e187a37b306346b0d55c10f051739, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -28.275925
-      objectReference: {fileID: 0}
-    - target: {fileID: 6503240716234015075, guid: e53e187a37b306346b0d55c10f051739, type: 3}
-      propertyPath: m_ConstrainProportionsScale
+    - target: {fileID: 5913490899683783972, guid: e53e187a37b306346b0d55c10f051739, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8562824102866237988, guid: e53e187a37b306346b0d55c10f051739, type: 3}
       propertyPath: m_Name
       value: DoorPuzzle
       objectReference: {fileID: 0}
-    - target: {fileID: 8562824102866237988, guid: e53e187a37b306346b0d55c10f051739, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 8198915428953802832, guid: e53e187a37b306346b0d55c10f051739, type: 3}
-    - {fileID: 2495556901077897069, guid: e53e187a37b306346b0d55c10f051739, type: 3}
-    - {fileID: 5713012066664095467, guid: e53e187a37b306346b0d55c10f051739, type: 3}
-    - {fileID: 2521850605397147549, guid: e53e187a37b306346b0d55c10f051739, type: 3}
-    - {fileID: 2397235063328038459, guid: e53e187a37b306346b0d55c10f051739, type: 3}
-    - {fileID: 5358389513150681986, guid: e53e187a37b306346b0d55c10f051739, type: 3}
-    - {fileID: 310423961814497710, guid: e53e187a37b306346b0d55c10f051739, type: 3}
+    - {fileID: 3172736365452353145, guid: e53e187a37b306346b0d55c10f051739, type: 3}
+    - {fileID: 296405446062321781, guid: e53e187a37b306346b0d55c10f051739, type: 3}
+    - {fileID: 3403410762025405059, guid: e53e187a37b306346b0d55c10f051739, type: 3}
+    - {fileID: 66310654881475021, guid: e53e187a37b306346b0d55c10f051739, type: 3}
+    - {fileID: 2446913222855807767, guid: e53e187a37b306346b0d55c10f051739, type: 3}
+    - {fileID: 8642730726870204089, guid: e53e187a37b306346b0d55c10f051739, type: 3}
+    - {fileID: 7833235861769379069, guid: e53e187a37b306346b0d55c10f051739, type: 3}
+    - {fileID: 8276613034677037200, guid: e53e187a37b306346b0d55c10f051739, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5806,7 +5780,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 673537893}
         m_TargetAssemblyTypeName: SceneManagercCnematicEscene, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 1
