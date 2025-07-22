@@ -33167,10 +33167,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45524eb5aa42e0146991107f75a1e9bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  extintorSprite: {fileID: 3286163911610860551, guid: 329df257a7bb8b0438abd36e292d01c3, type: 3}
-  puzzleSprite: {fileID: 3286163911610860551, guid: 7ea29c08dbb7f5f4b823f578441152da, type: 3}
-  cascoSprite: {fileID: 3286163911610860551, guid: a2e3eb7d813bd3348b1794c6639c1dcd, type: 3}
-  panelSprite: {fileID: 3286163911610860551, guid: 0aae4c989ca7ed744a365af3f0754e73, type: 3}
+  extintorSprite: {fileID: 3286163911610860551, guid: 6b372184c9d0c5840b1ac9a27e92ae16, type: 3}
+  puzzleSprite: {fileID: 3286163911610860551, guid: 5cbbb607a3ab7ef4294357e88c7d1c95, type: 3}
+  cascoSprite: {fileID: 3286163911610860551, guid: c9529c7e01e7fa542b9a0af4c0ada379, type: 3}
+  panelSprite: {fileID: 3286163911610860551, guid: 02104cf0d305c9546ae7d1d9f0845c37, type: 3}
   objectiveImage: {fileID: 1540859966}
 --- !u!4 &4582277379174123293
 Transform:
