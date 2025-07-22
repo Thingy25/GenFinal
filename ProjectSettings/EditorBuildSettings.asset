@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/hannah/cinematica 2/Nivel 2  cinematica.unity
     guid: a0080f1819e1fe5498c7f3dcdd03f899
+  - enabled: 1
+    path: Assets/Scenes/Fase2.unity
+    guid: 1df990dce89dd0c438402acf46449b3d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 20de64e16cdb7ec41bcbeab67d7b279e, type: 3}
   m_UseUCBPForAssetBundles: 0

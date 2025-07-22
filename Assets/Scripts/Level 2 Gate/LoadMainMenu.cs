@@ -5,6 +5,6 @@ public class LoadMainMenu : MonoBehaviour
 {
     public void LoadMainMenuCinematic2()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Fase2");
     }
 }
