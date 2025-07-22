@@ -4171,6 +4171,12 @@ PlayableDirector:
     value: {fileID: 2137856137}
   - key: {fileID: -2872496505611912672, guid: 5fade672fcf74ab4a95d0bff4a9a984a, type: 2}
     value: {fileID: 106666922}
+  - key: {fileID: 1302976121251476678, guid: 5fade672fcf74ab4a95d0bff4a9a984a, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 6475958250224236419, guid: 5fade672fcf74ab4a95d0bff4a9a984a, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -4016472623618682781, guid: 5fade672fcf74ab4a95d0bff4a9a984a, type: 2}
+    value: {fileID: 1661669490}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1250454430
@@ -5014,6 +5020,84 @@ Transform:
   - {fileID: 1714994455}
   m_Father: {fileID: 1533989437}
   m_LocalEulerAnglesHint: {x: 24.480139, y: 24.210371, z: 42.53211}
+--- !u!1 &1661669489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1661669492}
+  - component: {fileID: 1661669491}
+  - component: {fileID: 1661669490}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1661669490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661669489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 0}
+    - {fileID: 11400000, guid: f7d1f630a2186794dba40360bd5a9936, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls: []
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1661669491}
+          m_TargetAssemblyTypeName: LoadMainMenu, Assembly-CSharp
+          m_MethodName: LoadMainMenuCinematic2
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1661669491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661669489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c176f44c3fcdde946a5bb9100f257524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1661669492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661669489}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0698688, y: 1.2551752, z: 2.6437488}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1677535244
 GameObject:
   m_ObjectHideFlags: 0
@@ -6936,3 +7020,4 @@ SceneRoots:
   - {fileID: 1700148703}
   - {fileID: 106666920}
   - {fileID: 2137856141}
+  - {fileID: 1661669492}
