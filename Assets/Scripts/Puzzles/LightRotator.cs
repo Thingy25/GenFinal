@@ -144,6 +144,7 @@ public class LightRotator : MonoBehaviour
 
         puzzleSolved = true;
         Debug.Log("¡Puzzle resuelto!");
+        ObjetiveManagerLevel1.Instance.SetHelmetSprite();
         LevelManager.Instance.CallNextLevelBeat();
         UpdateVisuals();
 

@@ -23,6 +23,7 @@ public class RunesManager : MonoBehaviour
         if (totalActivated == 5)
         {
             stoneGateScript.OpenTheGate();
+            ObjetiveManagerLevel2.Instance.SetMotorSprite();
             Debug.Log("Abrete sesamo");
         }
     }
