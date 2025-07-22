@@ -382,6 +382,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanvasToOpen: {fileID: 3607877942691892340}
+  respectiveLvlBeat: 0
+  canBeInteracted: 0
 --- !u!114 &1493794735149849814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,6 +431,30 @@ PrefabInstance:
       propertyPath: brain
       value: 
       objectReference: {fileID: 1493794735149849814}
+    - target: {fileID: 563569731732696386, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 719369024065681643, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 767056815777951047, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148027990446337518, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1473283776898072047, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1473283776898072047, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1746679939430389132, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
       propertyPath: brain
       value: 
@@ -445,10 +471,18 @@ PrefabInstance:
       propertyPath: brain
       value: 
       objectReference: {fileID: 1493794735149849814}
+    - target: {fileID: 2262024301137863399, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2522401324157008430, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
       propertyPath: brain
       value: 
       objectReference: {fileID: 1493794735149849814}
+    - target: {fileID: 2648591739103956769, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3163010462174670026, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
       propertyPath: m_text
       value: NO ENERGY
@@ -464,6 +498,30 @@ PrefabInstance:
     - target: {fileID: 3163010462174670026, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163010462174670026, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278194687
+      objectReference: {fileID: 0}
+    - target: {fileID: 3312736505417619872, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410475901489290263, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843622311692922303, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925012210541783872, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1476882
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925012210541783872, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1199981
       objectReference: {fileID: 0}
     - target: {fileID: 4040318259614660499, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
       propertyPath: brain
@@ -561,6 +619,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5069181450412135952, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5503304828930982531, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5689067272808483197, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
       propertyPath: brain
       value: 
@@ -569,22 +635,50 @@ PrefabInstance:
       propertyPath: brain
       value: 
       objectReference: {fileID: 1493794735149849814}
+    - target: {fileID: 6579389291481612564, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6715357263941711018, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
       propertyPath: brain
       value: 
       objectReference: {fileID: 1493794735149849814}
+    - target: {fileID: 6726889707393259050, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6785120241091061335, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
       propertyPath: m_Name
       value: CanvasPuzzle1
       objectReference: {fileID: 0}
     - target: {fileID: 6785120241091061335, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6870251396039680892, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
       propertyPath: brain
       value: 
       objectReference: {fileID: 1493794735149849814}
+    - target: {fileID: 7057291562593996910, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1838487
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057291562593996910, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1476882
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057291562593996910, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1199981
+      objectReference: {fileID: 0}
+    - target: {fileID: 7287511482223592670, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348896175380085206, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7846388092836311436, guid: f8042c653b02eb24dbd12194e9cb9eb6, type: 3}
       propertyPath: brain
       value: 
