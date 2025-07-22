@@ -7,9 +7,10 @@ public class FireObstacle : MonoBehaviour
     int damageAmount = 0;
 
     Coroutine dmgCoroutine;
+    bool isPlayerOnFire = false;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -22,9 +23,10 @@ public class FireObstacle : MonoBehaviour
     {
         if (other.TryGetComponent<IDamageable>(out var damageable))
         {
-            dmgCoroutine = StartCoroutine(DealDamageOvTime(damageable));
+            StartCoroutine(DealDamageOvTime(damageable));
+            isPlayerOnFire = true;
         }
-        ISpecialProps prop = other.GetComponent<ISpecialProps>(); //other.TryGetComponent<ISpecialProps>(out );
+        //ISpecialProps prop = other.GetComponent<ISpecialProps>(); //other.TryGetComponent<ISpecialProps>(out );
         if (other.TryGetComponent<ISpecialProps>(out var extinguisher))
         {
             extinguisher.PerformSpecialAction();
@@ -34,20 +36,20 @@ public class FireObstacle : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        IDamageable damageable = other.GetComponent<IDamageable>();
-        if (damageable != null)
+        if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("dnsjflw");
-            StopCoroutine(dmgCoroutine);
+            isPlayerOnFire = false;
+            StopCoroutine("DealDamageOvTime");
         }
     }
 
     IEnumerator DealDamageOvTime(IDamageable damageable)
     {       
-        while (true)
+        while (isPlayerOnFire)
         {
             yield return new WaitForSeconds(0.35f);
             damageable.ReceiveDamage(damageAmount);
+            Debug.Log("DJKDFHDKFN");
         }
     }
 

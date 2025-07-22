@@ -11,6 +11,7 @@ public class HudManager : MonoBehaviour
     GameObject deathPanel;
     [SerializeField]
     TextMeshProUGUI oxygenText;
+    Color oxColor = new Color();
     public bool isGamePaused = false;
     public bool canPause = true;
     
@@ -29,6 +30,7 @@ public class HudManager : MonoBehaviour
             Instance = this; 
         }
         PlayerOxygen.OnUIValueChanged += UpdateOxygenText;
+        oxColor = oxygenText.color;
     }
 
     public void EnableInteraction(string text)
@@ -94,6 +96,13 @@ public class HudManager : MonoBehaviour
     void UpdateOxygenText(int newText)
     {
         oxygenText.text = newText + "%";
+        if (newText <= 30)
+        {
+            oxygenText.color = Color.red;
+        }else
+        {
+            oxygenText.color = oxColor;
+        }
     }
     
   

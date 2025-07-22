@@ -44,7 +44,7 @@ public class LightRotator : MonoBehaviour
 
     [Header("Puerta y cámara")]
     public Transform doorToMove;
-    public float doorMoveAmount = 2f;
+    public float doorMoveAmount = 1.5f;
     public float doorMoveDuration = 1f;
     //public Camera mainCamera;
     public GameObject doorCamera;

@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using TMPro;
+using System.Collections;
 public class PlayerOxygen : MonoBehaviour, IDamageable
 {
     public delegate void PlayerDeathEvent();
@@ -27,7 +28,7 @@ public class PlayerOxygen : MonoBehaviour, IDamageable
     {
         if (!hasHelmet)
         {
-            oxygen -= 1.2f * Time.deltaTime;
+            oxygen -= 0.75f * Time.deltaTime;
             Mathf.Clamp(oxygen, 0, maxOxygen);
             UpdateOxygenText();
             if (oxygen <= 0)
@@ -35,12 +36,13 @@ public class PlayerOxygen : MonoBehaviour, IDamageable
                 Die();
             }
         }
-        
+
     }
 
     void UpdateOxygenText()
     {
         int oxygenInt = (int)oxygen;
+        Mathf.Clamp(oxygenInt, 0, maxOxygen);
         OnUIValueChanged?.Invoke(oxygenInt);
         //oxygenText.text = oxygenInt + " %";
     }
@@ -61,22 +63,26 @@ public class PlayerOxygen : MonoBehaviour, IDamageable
         HudManager.Instance.ActivateDeathPanel();
     }
 
-    private void OnCollisionEnter(Collision other)
-    {
-        //if (other.gameObject.CompareTag("Fire"))
-        //{
-        //    oxygen -= 3;
-        //}
-    }
-
     void PutHelmetOn()
     {
         helmet.SetActive(true);
         hasHelmet = true;
+        StartCoroutine(ReplenishOxygen());
     }
 
     private void OnDisable()
     {
         PlayerHelmet.OnHelmetEnabled -= PutHelmetOn;
+    }
+
+    IEnumerator ReplenishOxygen()
+    {
+        while (oxygen < maxOxygen)
+        {
+            yield return new WaitForSeconds(0.5f);
+            oxygen++;
+            Mathf.Clamp(oxygen, 0, maxOxygen);
+            UpdateOxygenText();
+        }
     }
 }
